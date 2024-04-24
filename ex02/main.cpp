@@ -6,7 +6,7 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 20:11:57 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/04/24 20:42:40 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/04/24 20:48:11 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ int main( void ) {
 
 Fixed a;
 Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-
-
 
 std::cout << a << std::endl;
 std::cout << ++a << std::endl;
