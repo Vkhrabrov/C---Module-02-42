@@ -6,26 +6,26 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 20:12:14 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/04/23 23:26:29 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/04/24 21:49:17 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-const int Fixed::_fract_bits = 4;
+const int Fixed::_fract_bits = 8;
 
 Fixed::Fixed() : _fp_value(0){
-	std::cout << "Default constructor called" << std::endl;
+	// std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(const Fixed &copy){
-	std::cout << "Copy constructor called" << std::endl;
+	// std::cout << "Copy constructor called" << std::endl;
 	*this = copy; // using the assignment operator
 	// std::cout << "Copy constructor called" << std::endl;
 }
 
 Fixed &Fixed::operator = ( const Fixed &src){
-	std::cout << "Copy assignment operator called" << std::endl;
+	// std::cout << "Copy assignment operator called" << std::endl;
 	if (this != &src)
 		this->_fp_value = src.getRawBits();
 	
@@ -34,7 +34,7 @@ Fixed &Fixed::operator = ( const Fixed &src){
 
 Fixed::~Fixed()
 {
-	std::cout << "Destructor called" << std::endl;
+	// std::cout << "Destructor called" << std::endl;
 }
 
 int Fixed::getRawBits(void) const{
@@ -47,7 +47,7 @@ void Fixed::setRawBits(int const raw){
 }
 
 Fixed::Fixed(const int raw) {
-    std::cout << "Int constructor called" << std::endl;
+    // std::cout << "Int constructor called" << std::endl;
     this->_fp_value = raw << this->_fract_bits;
     // std::cout << "fixed-point value (int) is " << this->_fp_value << std::endl;
 
@@ -61,7 +61,7 @@ Fixed::Fixed(const int raw) {
 
 
 Fixed::Fixed(const float raw){
-	std::cout << "Float constructor called" << std::endl;
+	// std::cout << "Float constructor called" << std::endl;
 	this->_fp_value = roundf(raw * (1 << this->_fract_bits));
 	// std::cout << "fixed-point value (float) is " << this->_fp_value << std::endl;
 	// std::cout << "Binary representation: ";
@@ -117,15 +117,13 @@ Fixed Fixed::operator*(const Fixed& src){
 }
 
 Fixed &Fixed::operator++(){
-	int epsilon = 1 << _fract_bits;
-	this->_fp_value += epsilon;
+	this->_fp_value += 1;
 	return *this;
 }
 
 Fixed Fixed::operator++(int){
 	Fixed temp = *this;
-	int epsilon = 1 << _fract_bits;
-	this->_fp_value += epsilon;
+	this->_fp_value += 1;
 	return (temp);
 }
 
