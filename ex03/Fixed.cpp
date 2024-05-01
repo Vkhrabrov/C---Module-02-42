@@ -6,7 +6,7 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 20:12:14 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/05/01 19:00:22 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/05/01 18:57:58 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ Fixed::Fixed(const Fixed &copy){
 Fixed &Fixed::operator = ( const Fixed &src){
 	if (this != &src)
 		this->_fp_value = src.getRawBits();
+	
 	return *this;
 }
 

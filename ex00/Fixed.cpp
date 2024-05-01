@@ -6,7 +6,7 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 20:12:14 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/04/18 21:23:47 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/05/01 19:04:47 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,7 @@ Fixed::Fixed() : _fp_value(0){
 
 Fixed::Fixed(const Fixed &copy){
 	std::cout << "Copy constructor called" << std::endl;
-	*this = copy; // using the assignment operator
-	// std::cout << "Copy constructor called" << std::endl;
+	*this = copy;
 }
 
 Fixed &Fixed::operator = ( const Fixed &src){
