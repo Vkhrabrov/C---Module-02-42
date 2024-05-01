@@ -6,7 +6,7 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 19:32:29 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/04/28 20:39:11 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/05/01 19:01:06 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,13 +31,5 @@ Point &Point::operator = (const Point& src){
 	(void)src;
 	return *this;
 }
-
-// bool Point::operator != (const Point& src) const {
-// 	return (this->getX() != src.getX() || this->getY() != src.getY());
-// }
-
-// // bool Point::operator!=(const Point &point) const {
-// //     return (this->getX() != point.getX() && this->getY() != point.getY());
-// // }
 
 Point::~Point(){}

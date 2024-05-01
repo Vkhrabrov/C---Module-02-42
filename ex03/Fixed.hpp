@@ -6,7 +6,7 @@
 /*   By: vkhrabro <vkhrabro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 20:12:23 by vkhrabro          #+#    #+#             */
-/*   Updated: 2024/04/24 21:48:00 by vkhrabro         ###   ########.fr       */
+/*   Updated: 2024/05/01 19:01:07 by vkhrabro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ class Fixed{
 		static const int _fract_bits;
 
 	public:
-		Fixed(); // default constructor
-		Fixed(const Fixed& copy); // Copy Default constructor
+		Fixed();
+		Fixed(const Fixed& copy);
 		Fixed(const int raw);
 		Fixed(const float raw);
-		~Fixed(); // el destructor
+		~Fixed();
 
 		Fixed &operator = (const Fixed& src); 
 
